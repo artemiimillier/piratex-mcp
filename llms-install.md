@@ -1,19 +1,34 @@
-# Installing the Piratex MCP server (for AI agents)
+# Подключение MCP-сервера Piratex
 
-Piratex is a hosted remote MCP server. Nothing to install or build.
+Piratex работает как удалённый сервер. Локальная установка серверного кода не нужна.
 
 - URL: `https://piratex.ai/api/mcp`
-- Transport: Streamable HTTP
-- Auth: OAuth 2.1 (dynamic client registration). The user signs in on piratex.ai and presses "Allow". No API key needed.
-- Fallback auth: API key from the user's piratex.ai account, sent as `Authorization: Bearer px_...`.
+- Транспорт: Streamable HTTP.
+- Вход: OAuth. Пользователь входит на piratex.ai и подтверждает доступ.
+- Альтернатива для совместимых клиентов: личный API-ключ из кабинета в заголовке `Authorization: Bearer`.
 
-Client configs:
+Claude Code:
 
-- Claude Code: `claude mcp add --transport http piratex https://piratex.ai/api/mcp`, then `/mcp` to sign in.
-- Cursor (`~/.cursor/mcp.json`): `{"mcpServers": {"piratex": {"url": "https://piratex.ai/api/mcp"}}}`
-- VS Code (`.vscode/mcp.json`): `{"servers": {"piratex": {"type": "http", "url": "https://piratex.ai/api/mcp"}}}`
-- Claude (claude.ai / Desktop): Settings → Connectors → Add custom connector → the URL above.
-- ChatGPT: developer mode → add custom MCP server → the URL above, OAuth.
+```bash
+claude mcp add --transport http piratex https://piratex.ai/api/mcp
+```
 
-After connecting, call `account` (free) to check the plan and credits, then `trending_now` for a niche.
-Full docs: https://piratex.ai/en/mcp-server
+Затем `/mcp` и вход через браузер.
+
+Cursor:
+
+```json
+{"mcpServers":{"piratex":{"url":"https://piratex.ai/api/mcp"}}}
+```
+
+VS Code:
+
+```json
+{"servers":{"piratex":{"type":"http","url":"https://piratex.ai/api/mcp"}}}
+```
+
+В других клиентах используйте добавление собственного MCP-сервера, если оно доступно для аккаунта и региона. Это не подтверждение публикации в каталоге соответствующего клиента.
+
+После подключения можно вызвать бесплатный `account` для проверки баланса. Сбор трендов или разбор ролика может расходовать кредиты. Пример задачи: «Найди Reels про ремонт квартир с высокими просмотрами относительно обычного результата автора».
+
+Документация: [README](README.md). Актуальные тарифы: https://piratex.ai/pricing.
