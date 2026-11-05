@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.artemiimillier/piratex",
+  "title": "Piratex",
+  "description": "Trending Instagram Reels, TikTok and YouTube Shorts by niche, creator stats and video breakdowns",
+  "version": "1.0.0",
+  "websiteUrl": "https://piratex.ai",
+  "repository": {
+    "url": "https://github.com/artemiimillier/piratex-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://piratex.ai/logo.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://piratex.ai/api/mcp"
+    }
+  ]
+}
