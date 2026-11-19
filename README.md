@@ -76,6 +76,9 @@ claude mcp add --transport http piratex https://piratex.ai/api/mcp
 ## Документация и поддержка
 
 - [Как подключить сервер](llms-install.md)
+- [Пошаговое подключение к ChatGPT и Claude](https://piratex.ai/guides/chatgpt-claude-instagram-tiktok)
+- [Как искать удачные ролики в своей нише](https://piratex.ai/guides/kak-najti-virusnye-rilsy-v-nishe)
+- [Как разобрать ролик и подготовить свою версию](https://piratex.ai/guides/razbor-virusnogo-rolika)
 - [Метаданные для MCP Registry](server.json)
 - [Политика конфиденциальности](https://piratex.ai/privacy)
 - Поддержка: support@piratex.ai
